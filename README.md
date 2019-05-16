@@ -1,6 +1,6 @@
-# bootstrap
+# Bootstrap
 Bash scripts to assist in bootstrapping Debian and openSUSE environments
-
+The Stage 01 script initializes some local variables. It exports them to environmental variables. It is important to adjust these variables according to your target environment.
 The Debian scripts use debootstrap.
 It is included in several package managers' repos. 
 The openSUSE scripts use zypper.
@@ -10,6 +10,11 @@ It must be used in an openSUSE environment.
 The Stage 01 script initializes some local variables.
 It exports them to environmental variables.
 It is important to adjust these variables according to your target environment.
+Once they are set, select debootstrap to begin bootstrapping Debian
+If needed, select the mount-bind option to mount --bind the virtual filesystems
+/dev, /sys, and /proc.
+
+This is useful for making 
 
 The "${debootm}" variable is the URL of a Debian ftp server. 
 It gets exported to "$DEBMIR".
