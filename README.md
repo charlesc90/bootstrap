@@ -12,7 +12,7 @@ The openSUSE scripts use zypper.
 It must be used in an openSUSE environment.
 
 # Debian
-The Stage 01 script initializes some local variables.
+The strapond.sh script initializes some local variables.
 It exports them to environmental variables.
 It is important to adjust these variables according to your target environment.
 Once they are set, select debootstrap to begin bootstrapping Debian
