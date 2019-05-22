@@ -9,7 +9,7 @@ It is included in several package managers' repos.
 The zyppstrap.sh script use zypper.
 It must be used in an openSUSE environment.
 
-# Debian
+# strapond.sh - Debian
 The strapond.sh script initializes some local variables.
 It exports them to environmental variables.
 It is important to adjust these variables according to your target environment.
@@ -25,8 +25,8 @@ It gets exported to "$DEBMIR".
 The "${jail}" variable is the bootstrap target directory. 
 It gets exported to "$BIND".
 
-# ramstrap
+# ramstrap.sh - Debian
 The ramstrap.sh script bootstraps a Debian system onto a zram block device.
 
-# zyppstrap
+# zyppstrap - openSUSE
 zyppstrap.sh uses zypper to bootstrap an openSUSE environment. I'm not aware of any other distro that uses zypper, but it is possible to use pretty much any package manager to bootstrap a system. 
