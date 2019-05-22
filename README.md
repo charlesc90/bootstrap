@@ -1,14 +1,12 @@
 # bootstrap
 Bash scripts to assist in bootstrapping Debian and openSUSE environments
 
-The Stage 01 script initializes some local variables. 
-It exports them to environmental variables.
-It is important to adjust these variables according to your target environment.
+It is important to adjust the scripts' variables according to your target environment.
 
-The Debian scripts use debootstrap.
+The strapond.sh and ramstrap.sh scripts use debootstrap.
 It is included in several package managers' repos. 
 
-The openSUSE scripts use zypper.
+The zyppstrap.sh script use zypper.
 It must be used in an openSUSE environment.
 
 # Debian
@@ -29,3 +27,6 @@ It gets exported to "$BIND".
 
 # ramstrap
 The ramstrap.sh script bootstraps a Debian system onto a zram block device.
+
+# zyppstrap
+zyppstrap.sh uses zypper to bootstrap an openSUSE environment. I'm not aware of any other distro that uses zypper, but it is possible to use pretty much any package manager to bootstrap a system. 
