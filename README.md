@@ -1,4 +1,4 @@
-# Bootstrap
+# bootstrap
 Bash scripts to assist in bootstrapping Debian and openSUSE environments
 
 The Stage 01 script initializes some local variables. 
@@ -27,4 +27,5 @@ It gets exported to "$DEBMIR".
 The "${jail}" variable is the bootstrap target directory. 
 It gets exported to "$BIND".
 
-# openSUSE
+# ramstrap
+The ramstrap.sh script bootstraps a Debian system onto a zram block device.
