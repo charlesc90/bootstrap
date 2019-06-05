@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## setup #####################################################################
+## setup #######################################################################################
 
 # URI of a debian mirror
 dmir="http://ftp.us.debian.org/debian/"
@@ -13,7 +13,7 @@ else
     sudo mkdir -v $HOME/zram && sudo export ZHOME=$HOME/zram
 fi
 
-###############################################################################
+################################################################################################
 
 # First, probe the zram module. It is unlikely to be in your kernel by default.
 # If it's already in there, modprobing it will not cause any problems.
@@ -32,7 +32,7 @@ sudo export ZBLOCK="$CHECK"
 # and mounts it on the $HOME/zram directory. For other architectures, change the --arch
 # flag, and you can include packages (seperated by commas) after include. They must be in the 
 # Debian main repo for the debootstrap script to run completely.
-if [ $ZBLOCK = $CHECK ]; then
+if [ "$ZBLOCK" = "$CHECK" ]; then
     sudo blkid --probe $ZBLOCK
     sudo mkfs.ext4 -v $ZBLOCK
     sudo mount $ZBLOCK -v -t ext4 $ZHOME
@@ -40,3 +40,4 @@ if [ $ZBLOCK = $CHECK ]; then
 else
     echo "ERROR..." && sudo echo "zblock: $ZBLOCK zhome: $ZHOME check: $CHECK"
 fi
+#################################################################################################
