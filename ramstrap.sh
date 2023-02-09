@@ -36,7 +36,7 @@ if [ "$ZBLOCK" = "$CHECK" ]; then
     sudo blkid --probe $ZBLOCK
     sudo mkfs.ext4 -v $ZBLOCK
     sudo mount $ZBLOCK -v -t ext4 $ZHOME
-    sudo debootstrap --arch amd64 --include=build-essential sid $ZHOME "${dmir}"
+    sudo debootstrap --include=build-essential bullseye $ZHOME "${dmir}"
 else
     echo "ERROR..." && sudo echo "zblock: $ZBLOCK zhome: $ZHOME check: $CHECK"
 fi
