@@ -23,7 +23,7 @@ function bind-mount() {
 }
 
 function debootstrap() {
-	sudo debootstrap --arch amd64 --include=build-essential,vim,bash-completion,clang,ccache,bison,flex sid $BIND $DEBMIR
+	sudo debootstrap --include=build-essential,vim,bash-completion bullseye $BIND $DEBMIR
 	pause
 }
 
